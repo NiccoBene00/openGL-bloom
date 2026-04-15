@@ -3,7 +3,7 @@
 ## Overview
 
 This project is an OpenGL-based real-time rendering application developed in C++.  
-It showcases a **Bloom post-processing pipeline** applied to a stylized **sci-fi scene** (for now) with emissive elements and dynamic lighting.
+It show a **Bloom post-processing pipeline** applied to a **sci-fi scene** (for now) with emissive elements and dynamic lighting.
 
 ## Project Structure
 ```text
