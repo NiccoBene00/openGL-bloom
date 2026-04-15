@@ -6,6 +6,7 @@ This project is an OpenGL-based real-time rendering application developed in C++
 It showcases a **Bloom post-processing pipeline** applied to a stylized **sci-fi scene** (for now) with emissive elements and dynamic lighting.
 
 ## Project Structure
+```text
 bloom/
 │
 ├── main.cpp # Main application and render loop
@@ -33,6 +34,7 @@ bloom/
 ├── lib/ # Precompiled libraries (GLFW, etc.)
 │
 └── README.md # Project documentation
+```
 
 ## Requirements
 
@@ -54,12 +56,12 @@ To build and run this project, you need:
 
 From the root project folder, compile using:
 
-```
+```bash
 g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32
 ```
 
 To exectute
 
-```
+```bash
 ./bloom.exe
 ```
