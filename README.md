@@ -50,7 +50,7 @@ To build and run this project, you need:
 - Windows (MinGW64)
 - OpenGL 3.3 Core Profile
 
-  ## Build and Execute Instructions
+## Build and Execute Instructions
 
 From the root project folder, compile using:
 
