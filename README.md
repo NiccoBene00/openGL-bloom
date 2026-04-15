@@ -55,9 +55,9 @@ To build and run this project, you need:
 From the root project folder, compile using:
 
 ```bash
-g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32
+g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32```
 
 To exectute
 
 ```bash
-./bloom.exe
+./bloom.exe```
