@@ -50,14 +50,15 @@ To build and run this project, you need:
 - Windows (MinGW64)
 - OpenGL 3.3 Core Profile
 
-  ## Build Instructions
+  ## Build and Execute Instructions
 
 From the root project folder, compile using:
 
-```bash
-g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32```
+```
+g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32
+```
 
 To exectute
 
-```bash
+```
 ./bloom.exe```
