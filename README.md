@@ -61,4 +61,5 @@ g++ main.cpp src/shader.cpp src/glad.c -o bloom.exe -Iinclude -Llib -lglfw3 -lop
 To exectute
 
 ```
-./bloom.exe```
+./bloom.exe
+```
