@@ -11,7 +11,7 @@ void main()
     vec3 sceneColor = texture(scene, TexCoords).rgb;
     vec3 bloomColor = texture(bloomBlur, TexCoords).rgb;
 
-    vec3 result = sceneColor + bloomColor;
+    vec3 result = sceneColor * 1.0 + bloomColor * 0.2;
 
     FragColor = vec4(result, 1.0);
 }
