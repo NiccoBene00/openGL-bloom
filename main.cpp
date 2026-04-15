@@ -252,7 +252,7 @@ int main()
 
     //------TEXTURE LOADING------
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("resources/textures/Metal.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load("resources/textures/chip.jpg", &width, &height, &nrChannels, 0);
 
         if (data)
     {
@@ -273,19 +273,6 @@ int main()
     }
     stbi_image_free(data);
 
-    unsigned int normalMap;
-    glGenTextures(1, &normalMap);
-    glBindTexture(GL_TEXTURE_2D, normalMap);
-
-    int w,h,n;
-    unsigned char* data2 = stbi_load("resources/textures/metalNormal.jpg", &w,&h,&n,0);
-
-    if(data2)
-    {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, data2);
-        glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    stbi_image_free(data2);
     //--------------------------
 
 
@@ -316,9 +303,7 @@ int main()
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture);
         glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, normalMap);
-        glUniform1i(glGetUniformLocation(shader.ID, "normalMap"), 1);
+
 
         glUniform3f(glGetUniformLocation(shader.ID, "objectColor"), 0.1f, 0.1f, 0.1f);
         //glUniform3f(glGetUniformLocation(shader.ID, "lightColor"), 7.0f, 7.0f, 7.0f);
@@ -387,7 +372,7 @@ int main()
                 model = glm::scale(model, glm::vec3(0.25f));
 
                 //STRIP NEON (solo alcune righe)
-                if (y == 2 || y == 4 && (z % 4 == 0))
+                if ((y == 2 || y == 4) && (z % 4 == 0))
                     glUniform1i(glGetUniformLocation(shader.ID, "isEmissive"), 1);
                 else
                     glUniform1i(glGetUniformLocation(shader.ID, "isEmissive"), 0);
@@ -403,7 +388,7 @@ int main()
                 model = glm::scale(model, glm::vec3(0.25f));
 
                 // STESSA LOGICA NEON
-                if (y == 2 || y == 4 && (z % 4 == 0))
+                if ((y == 2 || y == 4) && (z % 4 == 0))
                     glUniform1i(glGetUniformLocation(shader.ID, "isEmissive"), 1);
                 else
                     glUniform1i(glGetUniformLocation(shader.ID, "isEmissive"), 0);
